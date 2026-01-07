@@ -5,7 +5,12 @@
   - [GeneVar2](https://github.com/collaborativebioinformatics/GeneVar2), a little *too* good because it was a 2nd followup project
   - [Haploblock Clusters](https://github.com/collaborativebioinformatics/Haploblock_Clusters_ElixirBH25)
 - [X] Stick w the default MIT License, just don't use GPL or LGPL because industry can't use it 
-- [ ] Scaffold
+- [ ] (Tyler) Implement the baseline for Task 3 of Chimera in a federated setting (NVFlare)
+- [ ] Use Chimera Task 3 leaderboard and other research to think about improvements or a potential way to use a federated model to do well on this task
+- [ ] Now that we're in a federated setting, we can do updates for each modality independently, and thus we can extend each modality's data beyond the data merely provided in CHIMERA
+  - [ ] e.g., find more histopathology data
+  - [ ] e.g., find other potential modalities that might bolster our global fusion model (or we update our different fusion model architecture to take in this extra modality).
+  - [ ] could explore PCA or some other method that just takes in generic embeddings, and thus our fusion model could take in as many different modalities as we want, and the embeddings just have their semantic meaning (this may be out of scope for the hackathon)
 
 ![flowchart](figures/flowchart.png)
 
@@ -19,7 +24,7 @@
 
 # Methods (2 paras)
 
-## Selecting a Multimodal Dataset for Validation
+## Example Dataset and Task
 We decided to go with the data for the [CHIMERA Challenge](https://registry.opendata.aws/chimera), which stands for
 > Combining HIstology, Medical imaging (radiology) and molEcular data for medical pRognosis and diAgnosis
 Details for the challenge are [here](https://chimera.grand-challenge.org/).
@@ -29,6 +34,12 @@ Details for the challenge are [here](https://chimera.grand-challenge.org/).
 This data was open-access and easily available on [AWS Open Data](https://registry.opendata.aws/). 
 
 We opted for [Task 3](https://chimera.grand-challenge.org/task-3-bladder-cancer-recurrence-prediction/) of this challenge. See [How we built this tool](#how-to-use-this-tool) for the reasons why we chose this task.
+
+## Setting up the baseline
+The [CHIMERA repository](https://github.com/DIAGNijmegen/CHIMERA/tree/main) does not give great instructions for how to establish the task 3 baseline. *The README in that folder is 1 byte. As in it's blank. Disgusting.* So we cloned the repository locally and recreated it ourselves.
+
+## Extending the Challenge
+(PROPOSED, NOT GUARANTEED YET) Because we have now implemented this in a federated setting, we can now extend each subtype of data provided in CHIMERA using other open-access datasets. (I'm just freestyling rn) For example, the histopathology data was extended with SOME DATASET HERE
 
 
 # How we built this tool
