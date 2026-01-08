@@ -101,7 +101,8 @@ def main():
         for epoch in range(EPOCHS):
             running_loss = 0.0
             for i, batch in enumerate(train_loader):
-                data = batch[0].to(device)
+                data = batch.to(device)
+                print(data)
                 optimizer.zero_grad()
 
                 predictions = predict_risk(model, data)

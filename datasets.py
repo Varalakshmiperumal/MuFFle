@@ -29,7 +29,7 @@ class ClinicalDataset(BaseMedicalDataset):
         features = [
             float(data['age']),
             float(sex_map.get(data['sex'], 0)),
-            float(data['smoking']),
+            0.0 if data['smoking'] == 'No' else 1.0,
             float(tumor_map.get(data['tumor'], 0)),
             1.0 if "T1" in data['stage'] else 0.0,
             1.0 if data['substage'] == "T1e" else 0.0,
