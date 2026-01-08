@@ -42,7 +42,6 @@ Details for the challenge are [here](https://chimera.grand-challenge.org/).
 
 The data contains histopathology, RNA sequencing along with patient's clinical data. 
 
-![CHIMERA HE](igures/chimera_RNA_matrix.csv.png)
 
 *author's note, what a forced acronym :-)*
 
